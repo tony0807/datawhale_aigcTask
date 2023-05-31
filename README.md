@@ -1,5 +1,17 @@
 # 使用GPT-3.5 API创建的ChatGPT聊天页面，模型回复效果与官网的ChatGPT一致
- 
+ ----注意这里使用的是翻墙部署和railway部署，对于使用colab或者本地部署时候不一样，暂时跑不起来；
+ 但是如果是colab部署，需要增加openai_api_key的配置以及指定config文件的路径才能执行，另外端口还不知道在哪里改
+ main文件里第30行要改成这样
+ with open("/content/config.yaml", "r", encoding="utf-8") as f:
+ 第8,9行增加
+ import sys
+sys.path.append('/content/')
+openai_api_key的获取方式为
+OPENAI_API_KEY = config['OPENAI_API_KEY']
+os.environ.setdefault("OPENAI_API_KEY",OPENAI_API_KEY)
+才能把环境变量设置成功
+config.yaml 中的配置增加如下，冒号后面必须要有空格
+OPENAI_API_KEY: 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
 
 ## 部署方法
 分别介绍下面几种部署方法，选择一种即可，部署完成后直接跳转至后面的使用介绍继续即可
