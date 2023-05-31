@@ -1,5 +1,5 @@
 # 使用GPT-3.5 API创建的ChatGPT聊天页面，模型回复效果与官网的ChatGPT一致
- ----注意这里使用的是翻墙部署和railway部署，对于使用colab或者本地部署时候不一样，暂时跑不起来；
+ ### 注意这里使用的是翻墙部署和railway部署，对于使用colab或者本地部署时候不一样，暂时跑不起来；
  但是如果是colab部署，需要增加openai_api_key的配置以及指定config文件的路径才能执行，另外端口还不知道在哪里改
  main文件里第30行要改成这样
  with open("/content/config.yaml", "r", encoding="utf-8") as f:
